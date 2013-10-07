@@ -23,8 +23,8 @@ get_header(); ?>
   // Additional JS functions here
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '198837703622628', // App ID
-      channelUrl : '//xively.ukuzala.com/channel.html', // Channel File
+      appId      : '[YOUR APP ID]', // App ID
+      channelUrl : '//life.ukuzala.com/channel.html', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML

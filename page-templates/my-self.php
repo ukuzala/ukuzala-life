@@ -37,8 +37,8 @@ get_header(); ?>
 				
 				// Create our Application instance (replace this with your appId and secret).
 				$facebook = new Facebook(array(
-				  'appId'  => '198837703622628',
-				  'secret' => '3c85e4dec6f648d858fd6ff2d5faf2f9',
+				  'appId'  => '[YOUR APP ID]',
+				  'secret' => '[YOUR SECRET KEY]',
 				));
 				
 				$user = $facebook->getUser();
@@ -96,7 +96,7 @@ jQuery(document).ready(function(jQuery) {
 	function countdown () {
 	var now = moment(), // get the current moment
 		// December 31, 2013 @ 12:00AM (Javascript months are 0-11)
-		then = moment([2013, 11, 31]),
+		then = moment([YYYY, MM, DD),
 		// get the difference from now to then in ms
 		ms = then.diff(now, 'milliseconds', true);
 		// If you need years, uncomment this line and make sure you add it to the concatonated phrase
@@ -140,7 +140,7 @@ jQuery(document).ready(function(jQuery) {
 	function anniversaryCountdown () {
 	var now = moment(), // get the current moment
 		// December 31, 2013 @ 12:00AM (Javascript months are 0-11)
-		then = moment([2014, 5, 15]),
+		then = moment([YYYY, MM, DD]),
 		// get the difference from now to then in ms
 		ms = then.diff(now, 'milliseconds', true);
 		// If you need years, uncomment this line and make sure you add it to the concatonated phrase
@@ -180,7 +180,7 @@ jQuery(document).ready(function(jQuery) {
   	}
 	
 	// Google Spreadsheet data
-	var public_spreadshseet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApXdH3IoTHoMdHJIYm9XZkNPX255ZHFJNno2LUFUVGc&output=html';
+	var public_spreadshseet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=[YOUR TOKEN ID]&output=html';
 		
 	Tabletop.init( { key: public_spreadshseet_url,
 					 callback: showInfo,

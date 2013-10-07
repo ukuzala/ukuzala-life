@@ -39,10 +39,10 @@ if (typeof jQuery == "function") { jQuery.noConflict(); }
 jQuery(document).ready(function(jQuery) {  
   
   	// Display the current outside temperature
-	var apiKey = 'b04dbf475994a98f5849aa6856a4596d';
+	var apiKey = '[YOUR API KEY]';
     var url = 'https://api.forecast.io/forecast/';
-    var lati = 42.36;
-    var longi = -71.06;
+    var lati = 42.36; // YOUR LATITUDE
+    var longi = -71.06; // YOUR LONGITUDE
     var data;
 
     jQuery.getJSON(url + apiKey + "/" + lati + "," + longi + "?callback=?", function(data) {

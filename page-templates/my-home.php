@@ -49,11 +49,11 @@ if (typeof jQuery == "function") { jQuery.noConflict(); }
 jQuery(document).ready(function(jQuery) {  
   
   // Set the Xively API key (https://xively.com/users/YOUR_USERNAME/keys)  
-  xively.setKey( "qJmdX7oHEdGv7sqIz6XvpulgKT6A601PifyWh7ZtJNWOX1sb" );  
+  xively.setKey( "[YOUR API KEY]" );  
   
   // Replace with your own values  
-  var feedID        = 1346240819,          // Feed ID  
-      datastreamID  = "photocell";       // Datastream ID   
+  var feedID        = YOUR_FEED_ID,          // Feed ID  
+      datastreamID  = "[YOUR DATASTREAM ID]";       // Datastream ID   
   
   // Get datastream data from Xively  
   xively.datastream.get (feedID, datastreamID, function ( datastream ) {  

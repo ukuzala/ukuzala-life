@@ -25,8 +25,8 @@ get_header(); ?>
 				
 				// Create our Application instance (replace this with your appId and secret).
 				$facebook = new Facebook(array(
-				  'appId'  => '198837703622628',
-				  'secret' => '3c85e4dec6f648d858fd6ff2d5faf2f9',
+				  'appId'  => '[YOUR APP ID]',
+				  'secret' => '[YOUR SECRET KEY]',
 				));
 				
 				$user = $facebook->getUser();

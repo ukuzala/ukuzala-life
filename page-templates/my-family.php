@@ -27,8 +27,8 @@ get_header(); ?>
 				
 				// Create our Application instance (replace this with your appId and secret).
 				$facebook = new Facebook(array(
-				  'appId'  => '198837703622628',
-				  'secret' => '3c85e4dec6f648d858fd6ff2d5faf2f9',
+				  'appId'  => '[YOU APP ID]',
+				  'secret' => '[YOUR SECRET KEY]',
 				));
 				
 				$user = $facebook->getUser();
@@ -78,7 +78,7 @@ if (typeof jQuery == "function") { jQuery.noConflict(); }
 jQuery(document).ready(function(jQuery) {  
    
    // Google Spreadsheet data
-	var public_spreadshseet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApXdH3IoTHoMdDd3WURFRS1VNUhlX0ZUazJLRjVQR3c&output=html;'
+	var public_spreadshseet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=[YOUR TOKEN ID]jVQR3c&output=html;'
 	
 	Tabletop.init( { key: public_spreadshseet_url,
 					 callback: showInfo,

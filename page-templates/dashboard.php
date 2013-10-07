@@ -210,10 +210,10 @@ if (typeof jQuery == "function") { jQuery.noConflict(); }
 jQuery(document).ready(function(jQuery) {  
   
   	  /*** Current Home Luminosity ***/
-	  xively.setKey( "qJmdX7oHEdGv7sqIz6XvpulgKT6A601PifyWh7ZtJNWOX1sb" );
+	  xively.setKey( "[YOUR API KEY]" );
 	  
-	  var homeFeedID        = 1346240819,  
-	  	  homeDatastreamID  = "photocell";
+	  var homeFeedID        = YOUR_FEED_ID,  
+	  	  homeDatastreamID  = "[YOUR DATASTREAM ID]";
 	  
 	  xively.datastream.get (homeFeedID, homeDatastreamID, function ( datastream ) {  
 		
@@ -245,10 +245,10 @@ jQuery(document).ready(function(jQuery) {
 	  
 	  
 	  /*** Current Office Luminosity ***/
-	  /*xively.setKey( "iKhi87x4PTOegVFEyTUYOTKFhQe2JNNjgBz4MEaRo7pdmhOA" );
+	  /*xively.setKey( "[YOUR API KEY]" );
 	  
-	  var officeFeedID        = 1029041212,  
-          officeDatastreamID  = "light";
+	  var officeFeedID        = YOUR_FEED_ID,  
+          officeDatastreamID  = "[YOUR DATASTREAM ID]";
 	  
 	  xively.datastream.get (officeFeedID, officeDatastreamID, function ( datastream ) {  
 		
@@ -290,10 +290,10 @@ jQuery(document).ready(function(jQuery) {
 	
 	
 	/*** Current Weather ***/
-	var apiKey = 'b04dbf475994a98f5849aa6856a4596d';
+	var apiKey = '[YOUR API KEY]';
     var url = 'https://api.forecast.io/forecast/';
-    var lati = 42.36;
-    var longi = -71.06;
+    var lati = 42.36; // YOUR LATITUDE
+    var longi = -71.06; // YOUR LONGITUDE
     var data;
 
     jQuery.getJSON(url + apiKey + "/" + lati + "," + longi + "?callback=?", function(data) {
@@ -329,7 +329,7 @@ jQuery(document).ready(function(jQuery) {
 	function birthdayCountdown () {
 	var now = moment(), // get the current moment
 		// December 31, 2013 @ 12:00AM (Javascript months are 0-11)
-		then = moment([2013, 11, 31]),
+		then = moment([YYYY, MM, DD]),
 		// get the difference from now to then in ms
 		ms = then.diff(now, 'milliseconds', true);
 		// If you need years, uncomment this line and make sure you add it to the concatonated phrase
@@ -375,7 +375,7 @@ jQuery(document).ready(function(jQuery) {
 	function anniversaryCountdown () {
 	var now = moment(), // get the current moment
 		// December 31, 2013 @ 12:00AM (Javascript months are 0-11)
-		then = moment([2014, 5, 15]),
+		then = moment([YYYY, MM, DD]),
 		// get the difference from now to then in ms
 		ms = then.diff(now, 'milliseconds', true);
 		// If you need years, uncomment this line and make sure you add it to the concatonated phrase
@@ -416,7 +416,7 @@ jQuery(document).ready(function(jQuery) {
 	
 	
 	// Load Google Spreadsheet data: Emails Received
-	var email_spreadshseet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApXdH3IoTHoMdHJIYm9XZkNPX255ZHFJNno2LUFUVGc&output=html';
+	var email_spreadshseet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=[YOUR TOKEN ID]&output=html';
 		
 	Tabletop.init( { key: email_spreadshseet_url,
 					 callback: showEmailInfo,
@@ -424,7 +424,7 @@ jQuery(document).ready(function(jQuery) {
 					 
 	
 	// Load Google Spreadsheet data: Family Blog
-	var blog_spreadshseet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApXdH3IoTHoMdDd3WURFRS1VNUhlX0ZUazJLRjVQR3c&output=html;'
+	var blog_spreadshseet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=[YOUR TOKEN ID]&output=html;'
 	
 	Tabletop.init( { key: blog_spreadshseet_url,
 					 callback: showBlogInfo,
@@ -473,29 +473,29 @@ function showBlogInfo(data) {
 /*** Instagram Feeds ***/
 var myInstaFeed = new Instafeed({
 	get: 'user',
-	userId: 14518851,
-	accessToken: '14518851.467ede5.da7d1c488a7d4a7abe3f21bc8aa26c96', 
+	userId: YOUR_USER_ID,
+	accessToken: '[YOUR ACCESS TOKEN]', 
 	limit: 2,
 	resolution: 'low_resolution',
-    clientId: '43d16ec5052f4d2c84550e1e2bc92646'
+    clientId: '[YOUR CLIENT ID]'
 });
 myInstaFeed.run();
 
 var locationInstaFeed = new Instafeed2({
 	get: 'location',
-	locationId: 72160075,
+	locationId: YOUR_LOCATION_ID,
 	limit: 5,
 	resolution: 'low_resolution',
-    clientId: '43d16ec5052f4d2c84550e1e2bc92646'
+    clientId: '[YOUR CLIENT ID]'
 });
 locationInstaFeed.run();
 
 var homeInstaFeed = new Instafeed3({
 	get: 'tagged',
-	tagName: 'southstation',
+	tagName: '[YOUR TAG NAME]',
 	limit: 5,
 	resolution: 'low_resolution',
-    clientId: '43d16ec5052f4d2c84550e1e2bc92646'
+    clientId: '[YOUR CLIENT ID]'
 });
 homeInstaFeed.run();
 </script>
